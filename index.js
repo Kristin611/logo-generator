@@ -58,7 +58,7 @@ function init() {
                  
             }
 
-            writeToFile('logo.svg', shapeChoice.render())
+            writeToFile('examples/logo.svg', shapeChoice.render())
 
         })
 }
