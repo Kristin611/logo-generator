@@ -3,12 +3,12 @@ const inquirer = require('inquirer');
 const path = require('path');
 const {Circle, Triangle, Square} = require('./lib/shapes')
 
-//create function to write SVG file
+//Function to write SVG file
     function writeToFile(fileName, data) {
         fs.writeFileSync(path.join(fileName), data)
     }
 
-//create starter function to initialize app
+//Starter function to initialize app
 function init() {
     inquirer
     .prompt([
@@ -45,7 +45,7 @@ function init() {
             const background = responses.background;
             console.log({...responses})
 
-            let shapeChoice;
+            let shapeChoice; //switch cases to generate a logo based on user's shape choice
             switch(responses.shape) {
                 case 'circle': 
                 shapeChoice = new Circle(responses.text, responses.color, responses.background)
